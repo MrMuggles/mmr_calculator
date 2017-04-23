@@ -4,17 +4,6 @@ mmrCalculator.controller("Calculator", function($scope, $http, $q) {
     $scope.players = [];
     initializeTeams();
 
-    /*var playerIds = [
-        75266609,
-        132776452,
-        84686772,
-        83595907,
-        123259336,
-        49874993,
-        73021235,
-        56308429
-    ];*/
-
     $http({
         url : 'https://spreadsheets.google.com/feeds/list/1MUUbce5K4f6I_U1jP6ymK54QKLIjCvFGyRL2Gbf0rgM/od6/public/basic?alt=json',
         method : 'GET'
@@ -82,6 +71,7 @@ mmrCalculator.controller("Calculator", function($scope, $http, $q) {
                 for (i = 0; i < activePlayers.length; i++) {
                     targetTotal += activePlayers[i].actualMMR;
                 }
+                targetTotal = Math.round(targetTotal / 2);
                 var combinations = getCombinations([activePlayers[0]], activePlayers.slice(1), (activePlayers.length / 2));
                 for (i = 0; i < combinations.length; i++) {
                     var currentTotal = 0;
