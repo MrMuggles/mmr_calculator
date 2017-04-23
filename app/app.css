@@ -1,4 +1,12 @@
 /* app css stylesheet */
 .selected {
-  background-color: rgb(208,61,51);
+  background-color: #D03D33;
+}
+
+.mmr-table-hover .selected:hover {
+  background-color: #FF3C28;
+}
+
+.mmr-table-hover tr:hover {
+  background-color: #f5f5f5
 }

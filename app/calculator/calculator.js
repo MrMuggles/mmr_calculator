@@ -83,7 +83,6 @@ mmrCalculator.controller("Calculator", function($scope, $http, $q) {
                     targetTotal += activePlayers[i].actualMMR;
                 }
                 var combinations = getCombinations([activePlayers[0]], activePlayers.slice(1), (activePlayers.length / 2));
-                console.log(combinations);
                 for (i = 0; i < combinations.length; i++) {
                     var currentTotal = 0;
                     for (var j = 0; j < combinations[i].length; j++) {
