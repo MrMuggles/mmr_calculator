@@ -42,6 +42,7 @@ mmrCalculator.controller("Calculator", function($scope, $http, $q) {
                         soloMMR: soloMMR,
                         partyMMR: partyMMR,
                         actualMMR: actualMMR,
+                        avatar: result[i].data.profile.avatar,
                         selected: false
                     }
                 );

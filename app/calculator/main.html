@@ -1,11 +1,13 @@
 <table class="table mmr-table-hover">
     <tr>
+        <th></th>
         <th>Name</th>
         <th>Solo MMR</th>
         <th>Party MMR</th>
         <th>Actual Party MMR</th>
     </tr>
     <tr ng-repeat="player in players" ng-click="selectPlayer();" ng-class="{selected: player.selected}">
+        <td><img src="{{player.avatar}}"/></td>
         <td>{{player.name}}</td>
         <td>{{player.soloMMR}}</td>
         <td>{{player.partyMMR}}</td>
@@ -24,14 +26,17 @@
         <td>
             <table class="table">
                 <tr>
+                    <th></th>
                     <th>Name</th>
                     <th>Actual Party MMR</th>
                 </tr>
                 <tr ng-repeat="player in team1">
+                    <td><img src="{{player.avatar}}"/></td>
                     <td>{{player.name}}</td>
                     <td>{{player.actualMMR}}</td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td>Average:</td>
                     <td>{{team1Average}}</td>
                 </tr>
@@ -40,14 +45,17 @@
         <td>
             <table class="table">
                 <tr>
+                    <th></th>
                     <th>Name</th>
                     <th>Actual Party MMR</th>
                 </tr>
                 <tr ng-repeat="player in team2">
+                    <td><img src="{{player.avatar}}"/></td>
                     <td>{{player.name}}</td>
                     <td>{{player.actualMMR}}</td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td>Average:</td>
                     <td>{{team2Average}}</td>
                 </tr>
